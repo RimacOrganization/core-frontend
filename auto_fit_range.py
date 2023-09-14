@@ -26,7 +26,7 @@ class AutoFitRange:
                 exc_type, exc_obj, exc_tb = sys.exc_info()
                 fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
                 print(exc, fname, exc_tb.tb_lineno)
-                raise
+                raise ValueError("info incorrect")
             else:
                 for col in ws.columns:
                     max_length = 0
@@ -39,6 +39,4 @@ class AutoFitRange:
                             pass
                     adjusted_width = (max_length + 0.97) 
                     ws.column_dimensions[column].width = adjusted_width
-                ExcelWorkbook.save_workbook(wb,path)
-        
-    
+                ExcelWorkbook.save_workbook(wb,path)    
