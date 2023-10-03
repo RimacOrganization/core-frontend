@@ -22,7 +22,6 @@ class AppendRange:
         except Exception as exc:
             exc_type, exc_obj, exc_tb = sys.exc_info()
             fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-            print(exc, fname, exc_tb.tb_lineno)
             raise
         else:
             try:
@@ -30,7 +29,6 @@ class AppendRange:
             except Exception as exc:
                 exc_type, exc_obj, exc_tb = sys.exc_info()
                 fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-                print(exc, fname, exc_tb.tb_lineno)
                 raise
             else:
                 if (exclude_headers==True):
