@@ -4,6 +4,7 @@ class LoginFrontEnd:
     def initial_session(self):
         try:
             print("Start session frontend")
+            print("... process ...")
         except Exception as e:
             print(e)
     
